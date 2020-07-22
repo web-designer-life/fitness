@@ -1,6 +1,8 @@
 const anchorsBody = () => {
     const anchors = document.querySelectorAll('ul>li>a[href*="#"]'),
-        arrowTop = document.getElementById('totop');
+        arrowTop = document.getElementById('totop'),
+        topMenu = document.querySelector('.top-menu'),
+        headSlider = document.querySelector('.head-slider');
 
     window.addEventListener('scroll', () => {
         const html = document.documentElement,
@@ -25,6 +27,15 @@ const anchorsBody = () => {
             fadeIn(arrowTop);
         } else {
             arrowTop.style.display = 'none';
+        }
+
+        if ((topMenu.offsetTop - topMenu.clientHeight) - html.scrollTop < 0) {
+            topMenu.style.position = 'fixed';
+            headSlider.style.margin = `${topMenu.clientHeight}px 0 0 0`;
+        }
+        if ((headSlider.offsetTop - topMenu.clientHeight) - html.scrollTop >= 0) {
+            headSlider.style.margin = null;
+            topMenu.style.position = null;
         }
     });
 

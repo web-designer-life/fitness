@@ -22,7 +22,6 @@ const anchorsBody = () => {
         };
 
         if (html.scrollTop > 0) {
-            console.log(display);
             fadeIn(arrowTop);
         } else {
             arrowTop.style.display = 'none';

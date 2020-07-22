@@ -1183,7 +1183,6 @@ header .top-menu ul li a {
 }
 
 header .top-menu ul li a:hover {
-    text-decoration: underline;
     color: #ffd11a
 }
 
@@ -2060,7 +2059,7 @@ footer .footer-bottom .right .socials .social-icon:hover a {
     height: 35px;
     background-color: #ffd11a;
     text-align: center;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .popup {
@@ -2252,6 +2251,12 @@ p.personal-data input[type=checkbox]:checked+label:before {
     color: #fff;
     font-weight: 500;
     margin-top: 30px
+}
+
+@media only screen and (min-width:992px) {
+    header .head .club-select .clubs-list ul {
+        padding: 3px
+    }
 }
 
 @media only screen and (max-width:1199px) {
@@ -2666,4 +2671,10 @@ p.personal-data input[type=checkbox]:checked+label:before {
     .slider-dots {
         bottom: 30px
     }
+}
+
+
+a:hover {
+    outline: none;
+    text-decoration: none;
 }

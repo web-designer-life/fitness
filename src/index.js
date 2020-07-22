@@ -10,6 +10,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
 import anchorsBody from './modules/anchors';
+import dropDownMenu from './modules/dropDownMenu';
 
-//anchors
 anchorsBody();
+dropDownMenu();

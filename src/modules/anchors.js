@@ -8,7 +8,7 @@ const anchorsBody = () => {
 
         const fadeIn = el => {
             if (display === 'none') {
-                let opacity = 0.01;
+                let opacity = 0.05;
                 el.style.opacity = opacity;
                 el.style.display = 'block';
                 const timer = setInterval(() => {
@@ -16,8 +16,8 @@ const anchorsBody = () => {
                         clearInterval(timer);
                     }
                     el.style.opacity = opacity;
-                    opacity += opacity;
-                }, 30);
+                    opacity += 0.05;
+                }, 10);
             }
         };
 

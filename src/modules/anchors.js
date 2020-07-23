@@ -23,7 +23,7 @@ const anchorsBody = () => {
             }
         };
 
-        if (html.scrollTop > 0) {
+        if (html.scrollTop > headSlider.offsetTop + headSlider.clientHeight - topMenu.clientHeight) {
             fadeIn(arrowTop);
         } else {
             arrowTop.style.display = 'none';

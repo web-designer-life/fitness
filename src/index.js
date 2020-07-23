@@ -11,6 +11,8 @@ smoothscroll.polyfill();
 
 import anchorsBody from './modules/anchors';
 import dropDownMenu from './modules/dropDownMenu';
+import popups from './modules/popups';
 
 anchorsBody();
 dropDownMenu();
+popups();

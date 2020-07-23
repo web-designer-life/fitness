@@ -127,7 +127,8 @@ a {
     padding: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent
+    background: transparent;
+    transition: all 0.5s
 }
 
 del {
@@ -2251,6 +2252,10 @@ p.personal-data input[type=checkbox]:checked+label:before {
     color: #fff;
     font-weight: 500;
     margin-top: 30px
+}
+
+.free-visit p a:hover {
+    opacity: 0.5;
 }
 
 @media only screen and (min-width:992px) {

@@ -12,7 +12,9 @@ smoothscroll.polyfill();
 import anchorsBody from './modules/anchors';
 import dropDownMenu from './modules/dropDownMenu';
 import popups from './modules/popups';
+import burgerMenu from './modules/burgerMenu';
 
 anchorsBody();
 dropDownMenu();
 popups();
+burgerMenu();

@@ -13,8 +13,10 @@ import anchorsBody from './modules/anchors';
 import dropDownMenu from './modules/dropDownMenu';
 import popups from './modules/popups';
 import burgerMenu from './modules/burgerMenu';
+import calc from './modules/calc';
 
 anchorsBody();
 dropDownMenu();
 popups();
 burgerMenu();
+calc();

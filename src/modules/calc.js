@@ -17,7 +17,7 @@ const calc = () => {
             "12": 19990
         };
 
-    calcForm.addEventListener('click', () => {
+    calcForm.addEventListener('input', () => {
         cardType.forEach(elem => {
             if (elem.checked) {
                 if (inputClubName.checked) {

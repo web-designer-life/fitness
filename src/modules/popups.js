@@ -15,11 +15,15 @@ const popups = () => {
 
     formWrapper.forEach(elem => {
         elem.addEventListener('click', e => {
-            const target = e.target;
+            const target = e.target,
+                formText = elem.querySelector('form>div');
 
             if (target.classList.contains('close_icon') || target.classList.contains('close-btn') ||
             !target.closest('.form-content')) {
                 elem.style.display = 'none';
+                if (formText) {
+                    formText.textContent = '';
+                }
             }
         });
     });

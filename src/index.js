@@ -14,9 +14,11 @@ import dropDownMenu from './modules/dropDownMenu';
 import popups from './modules/popups';
 import burgerMenu from './modules/burgerMenu';
 import calc from './modules/calc';
+import phone from './modules/phone';
 
 anchorsBody();
 dropDownMenu();
 popups();
 burgerMenu();
 calc();
+phone();

@@ -28,7 +28,6 @@ const phone = () => {
                 this.value = '';
             }
         } else {
-            console.log(this.value);
             setCursorPosition(this.value.length, this);
         }
     }

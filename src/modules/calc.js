@@ -1,6 +1,6 @@
 const calc = () => {
     const calcForm = document.getElementById('card_order'),
-        cardType = document.querySelectorAll('input[name="card-type"]'),
+        cardType = document.querySelectorAll('div[class="time"]>input[name="card-type"]'),
         inputClubName = document.getElementById('card_leto_mozaika'),
         priceTotal = document.getElementById('price-total'),
         inputPromo = document.querySelector('input[placeholder="Промокод"]'),

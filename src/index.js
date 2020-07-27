@@ -17,6 +17,7 @@ import calc from './modules/calc';
 import phone from './modules/phone';
 import forms from './modules/forms';
 import mainSlider from './modules/mainSlider';
+import gallerySlider from './modules/gallerySlider';
 
 anchorsBody();
 dropDownMenu();
@@ -26,3 +27,4 @@ calc();
 phone();
 forms();
 mainSlider();
+gallerySlider();

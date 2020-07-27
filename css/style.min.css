@@ -683,6 +683,10 @@ html#schelkovo .advantages .wrapper {
     justify-content: center
 }
 
+.active {
+    display: block !important;
+}
+
 @media only screen and (max-width:1199px) {
 
     html#mozaika .advantages .wrapper,
@@ -1390,22 +1394,20 @@ nav.popup-menu .close-menu-btn img {
     margin-left: -65px;
     z-index: 1000
 }
-
+  
 .slider-dots li {
-    float: left
-}
-
-.slider-dots li button {
+    float: left;
     width: 22px;
     height: 4px;
     background-color: #fff;
     border: none;
     border-radius: 2px;
     color: transparent;
-    margin-right: 5px
+    margin-right: 5px;
+    cursor: pointer;
 }
-
-.slider-dots li.slick-active button {
+  
+.slider-dots li.slick-active {
     background-color: #ffd11a
 }
 
@@ -1609,6 +1611,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider {
+    position: relative;
     padding-left: 75px;
     padding-right: 75px;
     max-width: 900px;
@@ -1617,6 +1620,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider .slide {
+    display: none;
     margin: 0 auto !important;
     width: 100%
 }
@@ -1626,25 +1630,29 @@ nav.popup-menu .close-menu-btn img {
     top: 50%;
     margin-top: -18px;
     z-index: 100;
-    cursor: pointer
-}
-
-#gallery .gallery-slider .slider-arrow span {
+    cursor: pointer;
     display: block;
     width: 36px;
     height: 37px;
-    background-color: #f4c71b;
     border-radius: 50%;
     text-align: center;
     padding-top: 11px
 }
 
 #gallery .gallery-slider .slider-arrow.prev {
-    left: 0
+    left: 0;
+    background: #f4c71b url('../images/arrow-left.png') no-repeat center;
+    transition: 0.3s
+}
+  
+#gallery .gallery-slider .slider-arrow.next {
+    right: 0;
+    background: #f4c71b url('../images/arrow-right.png') no-repeat center;
+    transition: 0.3s
 }
 
-#gallery .gallery-slider .slider-arrow.next {
-    right: 0
+#gallery .gallery-slider .slider-arrow:hover {
+    opacity: 0.6
 }
 
 #gallery .gallery-slider .slider-dots {

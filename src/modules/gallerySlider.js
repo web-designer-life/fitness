@@ -48,7 +48,7 @@ const gallerySlider = () => {
     };
 
     const startSlide = () => {
-        interval = setInterval(autoPlaySlide, 3000);
+        interval = setInterval(autoPlaySlide, 4000);
     };
 
     slider.addEventListener('click', event => {
@@ -78,7 +78,6 @@ const gallerySlider = () => {
         }
         nextSlide(slide, currentSlide, 'active');
         nextSlide(dot, currentSlide, 'slick-active');
-
     });
 
     slider.addEventListener('mouseover', event => {

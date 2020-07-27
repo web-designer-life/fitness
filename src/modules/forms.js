@@ -55,8 +55,8 @@ const forms = () => {
                     statusMessange.textContent = loadMessange;
                     form.append(statusMessange);
                     postData(body)
-                        .then(() => {
-                            if (status !== 200) {
+                        .then(response => {
+                            if (response.status !== 200) {
                                 throw new Error('status network not 200');
                             }
                             form.reset();
@@ -69,8 +69,9 @@ const forms = () => {
                                 thanks.style.display = 'block';
                             }
                         })
-                        .catch(() => {
+                        .catch(error => {
                             form.reset();
+                            console.log(error);
                             if (form.id === 'form1' || form.id === 'form2') {
                                 statusMessange.textContent = errorMessage;
                             } else {

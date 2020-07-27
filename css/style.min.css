@@ -1608,6 +1608,14 @@ nav.popup-menu .close-menu-btn img {
     height: 37px
 }
 
+.services-slider-block .slider-arrow {
+    transition: 0.3s
+}
+
+.services-slider-block .slider-arrow:hover {
+    opacity: 0.6
+}
+
 .services-slider-wrapper {
     display: flex;
     width: 100%;

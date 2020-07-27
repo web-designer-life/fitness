@@ -17,7 +17,7 @@ const calc = () => {
             "12": 19990
         };
 
-    calcForm.addEventListener('click', () => {
+    calcForm.addEventListener('input', () => {
         cardType.forEach(elem => {
             if (elem.checked) {
                 if (inputClubName.checked) {
@@ -29,11 +29,13 @@ const calc = () => {
         });
     });
 
-    inputPromo.addEventListener('input', () => {
-        if (inputPromo.value === "ТЕЛО2019") {
-            priceTotal.textContent = Math.floor(priceTotal.textContent * 0.7);
-        }
-    });
+    if (inputPromo) {
+        inputPromo.addEventListener('input', () => {
+            if (inputPromo.value === "ТЕЛО2019") {
+                priceTotal.textContent = Math.floor(priceTotal.textContent * 0.7);
+            }
+        });
+    }
 };
 
 export default calc;

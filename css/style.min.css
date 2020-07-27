@@ -2629,7 +2629,6 @@ p.personal-data input[type=checkbox]:checked+label:before {
     .main-slider .slide .slide-text .offer-head,
     .main-slider .slide.type2 .slide-text .offer-head {
         background: transparent;
-        margin-top: 30px;
         text-align: center
     }
 

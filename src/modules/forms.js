@@ -13,7 +13,9 @@ const forms = () => {
 
     name.forEach(elem => {
         elem.addEventListener('input', () => {
-            elem.value = elem.value.replace(/[^а-яА-ЯёЁ]/ig, '');
+            if (elem.placeholder !== 'Промокод') {
+                elem.value = elem.value.replace(/[^а-яА-ЯёЁ]/ig, '');
+            }
         });
     });
 

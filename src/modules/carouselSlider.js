@@ -6,7 +6,7 @@ const carouselSlider = () => {
         prev = servicesSliderBlock.querySelector('.prev'),
         sliderWidth = parseFloat(getComputedStyle(servicesSlider).width),
         slideWidth = parseFloat(getComputedStyle(slides[0]).width),
-        step = slideWidth / sliderWidth * 100,
+        step = 20,
         items = [];
 
     let positionLeftItem = 0,

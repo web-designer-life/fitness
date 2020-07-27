@@ -1543,15 +1543,15 @@ nav.popup-menu .close-menu-btn img {
 .services-slider {
     display: flex;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px
+    overflow: hidden
 }
 
 .services-slider .slide {
     text-align: center;
-    margin-right: 6px;
-    margin-left: 6px;
-    width: 210px
+    padding-right: 6px;
+    padding-left: 6px;
+    flex: 0 0 20%;
+    max-width: 20%
 }
 
 .services-slider .slide img {
@@ -1576,15 +1576,19 @@ nav.popup-menu .close-menu-btn img {
     margin: 0 auto
 }
 
-.services-slider .slider-arrow {
-    position: absolute;
+.services-slider-block {
+    display: flex
+}
+
+.services-slider-block .slider-arrow {
+    position: relative;
     top: 75px;
     margin-top: -18px;
     z-index: 100;
     cursor: pointer
 }
 
-.services-slider .slider-arrow span {
+.services-slider-block .slider-arrow span {
     display: block;
     width: 36px;
     height: 37px;
@@ -1594,12 +1598,20 @@ nav.popup-menu .close-menu-btn img {
     padding-top: 11px
 }
 
-.services-slider .slider-arrow.prev {
-    left: 2px
+.services-slider-block .slider-arrow.prev {
+    left: 25px;
+    height: 37px
 }
 
-.services-slider .slider-arrow.next {
-    right: 2px
+.services-slider-block .slider-arrow.next {
+    right: 25px;
+    height: 37px
+}
+
+.services-slider-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
 }
 
 #gallery {
@@ -2284,6 +2296,20 @@ p.personal-data input[type=checkbox]:checked+label:before {
 }
 
 @media only screen and (max-width:1199px) {
+    .services-slider {
+        width: 990px
+    }
+
+    .services-slider-block {
+        width: 1050px;
+        margin: auto
+    }
+    
+    .services-slider-wrapper {
+        display: flex;
+        width: auto
+    }
+    
     .services-slider .slider-arrow.prev {
         left: 25px
     }
@@ -2291,9 +2317,7 @@ p.personal-data input[type=checkbox]:checked+label:before {
     .services-slider .slider-arrow.next {
         right: 20px
     }
-}
 
-@media only screen and (max-width:1199px) {
     header .top-menu ul li a {
         padding-left: 30px
     }
@@ -2302,6 +2326,16 @@ p.personal-data input[type=checkbox]:checked+label:before {
         left: 50vw;
         right: 0;
         width: 49vw
+    }
+}
+
+@media only screen and (max-width:1110px) {
+    .services-slider {
+        width: 740px;
+    }
+
+    .services-slider-block {
+        width: 800px;
     }
 }
 
@@ -2356,7 +2390,6 @@ p.personal-data input[type=checkbox]:checked+label:before {
     .main-slider .slide .slide-text .offer-head,
     .main-slider .slide.type2 .slide-text .offer-head {
         background: transparent;
-        margin-top: 30px;
         text-align: center
     }
 
@@ -2411,6 +2444,16 @@ p.personal-data input[type=checkbox]:checked+label:before {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap
+    }
+}
+
+@media only screen and (max-width:865px) {
+    .services-slider {
+        width: 495px;
+    }
+
+    .services-slider-block {
+        width: 560px;
     }
 }
 
@@ -2539,6 +2582,20 @@ p.personal-data input[type=checkbox]:checked+label:before {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
+    }
+}
+
+@media only screen and (max-width:620px) {
+    .services-slider {
+        width: 250px;
+    }
+
+    .services-slider-block {
+        width: 300px;
+    }
+
+    .services-slider .slide {
+        padding-left: 0;
     }
 }
 
@@ -2699,6 +2756,16 @@ p.personal-data input[type=checkbox]:checked+label:before {
     }
 }
 
+@media only screen and (max-width:350px) {
+    .services-slider {
+        min-width: 236px
+    }
+
+    .services-slider .slide {
+        padding-right: 0;
+        padding-left: 6px
+    }
+}
 
 a:hover {
     outline: none;

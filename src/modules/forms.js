@@ -56,19 +56,22 @@ const forms = () => {
                     form.append(statusMessange);
                     postData(body)
                         .then(() => {
-                            form.reset();
-                            if (form.id === 'form1' || form.id === 'form2') {
-                                statusMessange.textContent = 'Заявка успешно отправлена.';
+                            if (status !== 200) {
+                                throw new Error('status network not 200');
                             } else {
-                                statusMessange.textContent = '';
-                                thanksTitle.textContent = 'Спасибо';
-                                thanksText.textContent = successMesage;
-                                thanks.style.display = 'block';
+                                form.reset();
+                                if (form.id === 'form1' || form.id === 'form2') {
+                                    statusMessange.textContent = 'Заявка успешно отправлена.';
+                                } else {
+                                    statusMessange.textContent = '';
+                                    thanksTitle.textContent = 'Спасибо';
+                                    thanksText.textContent = successMesage;
+                                    thanks.style.display = 'block';
+                                }
                             }
                         })
-                        .catch(error => {
+                        .catch(() => {
                             form.reset();
-                            console.error(error);
                             if (form.id === 'form1' || form.id === 'form2') {
                                 statusMessange.textContent = errorMessage;
                             } else {

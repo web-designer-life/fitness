@@ -34,8 +34,8 @@ const anchorsBody = () => {
             headSlider.style.margin = `${topMenu.clientHeight}px 0 0 0`;
         }
         if ((headSlider.offsetTop - topMenu.clientHeight) - html.scrollTop >= 0) {
-            headSlider.style.margin = null;
-            topMenu.style.position = null;
+            headSlider.style.margin = '';
+            topMenu.style.position = '';
         }
     });
 

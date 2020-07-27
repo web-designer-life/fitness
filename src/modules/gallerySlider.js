@@ -81,13 +81,15 @@ const gallerySlider = () => {
     });
 
     slider.addEventListener('mouseover', event => {
-        if (event.target.closest('.slider-arrow') || event.target.closest('.slider-dots')) {
+        if (event.target.closest('.slider-arrow') || event.target.closest('.slider-dots') ||
+         event.target.closest('.gallery-slider')) {
             clearInterval(interval);
         }
     });
 
     slider.addEventListener('mouseout', event => {
-        if (event.target.closest('.slider-arrow') || event.target.closest('.slider-dots')) {
+        if (event.target.closest('.slider-arrow') || event.target.closest('.slider-dots') ||
+         event.target.closest('.gallery-slider')) {
             startSlide();
         }
     });

@@ -16,6 +16,7 @@ import burgerMenu from './modules/burgerMenu';
 import calc from './modules/calc';
 import phone from './modules/phone';
 import forms from './modules/forms';
+import mainSlider from './modules/mainSlider';
 
 anchorsBody();
 dropDownMenu();
@@ -24,3 +25,4 @@ burgerMenu();
 calc();
 phone();
 forms();
+mainSlider();

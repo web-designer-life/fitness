@@ -1318,9 +1318,8 @@ nav.popup-menu .close-menu-btn img {
 }
 
 .main-slider .slide .slide-text .offer-head {
-    margin-top: 80px;
-    background: url(../images/slider-offer-bg.png) no-repeat 10px 0;
-    padding-top: 20px
+    background: url(../images/slider-offer-bg.png) no-repeat 20px 56px;
+    padding-top: 80px
 }
 
 .main-slider .slide .slide-text .offer-head .top {

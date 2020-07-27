@@ -58,16 +58,15 @@ const forms = () => {
                         .then(() => {
                             if (status !== 200) {
                                 throw new Error('status network not 200');
+                            }
+                            form.reset();
+                            if (form.id === 'form1' || form.id === 'form2') {
+                                statusMessange.textContent = 'Заявка успешно отправлена.';
                             } else {
-                                form.reset();
-                                if (form.id === 'form1' || form.id === 'form2') {
-                                    statusMessange.textContent = 'Заявка успешно отправлена.';
-                                } else {
-                                    statusMessange.textContent = '';
-                                    thanksTitle.textContent = 'Спасибо';
-                                    thanksText.textContent = successMesage;
-                                    thanks.style.display = 'block';
-                                }
+                                statusMessange.textContent = '';
+                                thanksTitle.textContent = 'Спасибо';
+                                thanksText.textContent = successMesage;
+                                thanks.style.display = 'block';
                             }
                         })
                         .catch(() => {

@@ -25,17 +25,12 @@ const calc = () => {
                 } else {
                     priceTotal.textContent = shelkovoPrice[elem.value];
                 }
+                if (inputPromo.value === "ТЕЛО2019") {
+                    priceTotal.textContent = Math.floor(priceTotal.textContent * 0.7);
+                }
             }
         });
     });
-
-    if (inputPromo) {
-        inputPromo.addEventListener('input', () => {
-            if (inputPromo.value === "ТЕЛО2019") {
-                priceTotal.textContent = Math.floor(priceTotal.textContent * 0.7);
-            }
-        });
-    }
 };
 
 export default calc;
